@@ -1,0 +1,197 @@
+--compatibility for games who change service names
+local Playr = game:GetService("Players")
+local Run = game:GetService("RunService")
+local Core = game:GetService("CoreGui")
+local LocalPlayer = Playr.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
+local Admin = loadstring(game:HttpGet("https://raw.githubusercontent.com/ReadyForBen/BEDSploit/main/ADMIN"))()
+
+local Gui = Library:AddGui({
+	Title = {"BEDSploit", "[BETA]"},
+	ThemeColor = Color3.fromRGB(255,26,140),
+	ToggleKey = Enum.KeyCode.RightShift,
+})
+
+local Tab = Gui:AddTab("FE Scripts")
+
+local Category = Tab:AddCategory("FE Car")
+
+local Label = Category:AddLabel("Go into R6 for this script to work.")
+
+local Button = Category:AddButton("Enable FE Car", function()
+	LocalPlayer.Character.Humanoid.WalkSpeed=70 LocalPlayer.Character.Humanoid.JumpPower=0.0001 Float_Height="-1.03" AnimationId="129342287" local a=Instance.new("Animation") a.AnimationId="rbxassetid://"..AnimationId local a=LocalPlayer.Character.Humanoid:LoadAnimation(a) a:Play() a:AdjustSpeed(1) for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Category = Tab:AddCategory("Settings")
+
+local Box = Category:AddBox("Slide", function(str)
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(str,0,0)end end 
+end)
+
+local Box = Category:AddBox("Hipheight", function(str)
+	Float_Height=str local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Slider = Category:AddSlider("Walkspeed", 1, 500, 16, function(val)
+	LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)
+
+local Category = Tab:AddCategory("Settings Presets")
+
+local Button = Category:AddButton("Default Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 70
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Button = Category:AddButton("Extreme Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0.5,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 500
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Tab = Gui:AddTab("Ragdoll Engine")
+
+local Category = Tab:AddCategory("Ragdoll Engine Features")
+local Button = Category:AddButton("Push Aura", function()
+    
+Run.RenderStepped:Connect(function()
+        LocalPlayer.Character.Push.PushEvent:FireServer()
+	end)
+end)
+
+local Label = Category:AddLabel("Useful for flinging people when you hit them with your car")
+local Label = Category:AddLabel("Or just flinging people who come close.")
+local Label = Category:AddLabel("Equip Push tool before clicking to work.")
+
+local Button = Category:AddButton("Anti-Ragdoll", function()
+	LocalPlayer.Character:FindFirstChild("Local Ragdoll"):Destroy()
+end)
+
+
+local Tab = Gui:AddTab("Prison Life")
+local Category = Tab:AddCategory("Oops, this is currently patched.")
+local Category = Tab:AddCategory("Check Back Later")
+local Category = Tab:AddCategory("Click the discord button to stay updated.")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+local Category = Tab:AddCategory("")
+
+local Category = Tab:AddCategory("Prison Life Features")
+local Button = Category:AddButton("Kill Aura", function()
+    
+Run.RenderStepped:Connect(function()
+        LocalPlayer.Character.Push.PushEvent:FireServer()
+	end)
+end)
+
+local Label = Category:AddLabel("Useful for instant killing people when you are near them with.")
+local Label = Category:AddLabel("Or just killing people who come close.")
+local Label = Category:AddLabel("Equip a gun before clicking to work.")
+
+local Button = Category:AddButton("Anti-Arrest", function()
+	LocalPlayer.Character:FindFirstChild("Arrest"):Destroy()
+end)
+
+local Tab = Gui:AddTab("Discord")
+
+local Category = Tab:AddCategory("Discord")
+
+local Button = Category:AddButton("Join Discord", function()
+    setclipboard("https://discord.gg/ZjSt69NfVk")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "ZjSt69NfVk"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end)
+local Tab = Gui:AddTab("Admin")
+
+local Category = Tab:AddCategory("Admin Commands")
+
+local Label = Category:AddLabel("Click below to enable:")
+
+
+local Button = Category:AddButton("FE Admin", function()
+    
+end)
+
+local Tab = Gui:AddTab("Credits")
+
+local Category = Tab:AddCategory("Credits")
+local Button = Category:AddButton("Created By: InactiveBen#0001", function()
+    	Core["FE Car Made by #InactiveBen#0001"]:Destroy()
+end)
+local Button = Category:AddButton("UI Library By: RegularVynixu", function()
+    	Core["FE Car Made by #InactiveBen#0001"]:Destroy()
+end)
+
+local Tab = Gui:AddTab("Settings")
+
+local Category = Tab:AddCategory("Settings")
+local Button = Category:AddButton("Hide UI: Left Shift", function()
+    	Core["FE Car Made by #InactiveBen#0001"]:Destroy()
+end)
+
+Library:Notify("Join Discord server?", function(bool)
+	if bool == true then
+		setclipboard("https://discord.gg/ZjSt69NfVk")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "ZjSt69NfVk"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end
+end)
